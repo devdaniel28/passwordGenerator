@@ -11,11 +11,24 @@
     <script src="src/script.js"></script>
 </head>
 <body>
-    <head>
+    <header>
         <h2>Gerador de Senhas</h2>
-    </head>
+    </header>
     <main>
+            <!-- config -->
+            <div id="config"> 
+                <h3>Quantidade de Caracteres</h3>
+                <input type="number" value="10" min="5" max="25" id="caracteres">
+                
+                <input type="checkbox" name="" id="letras">Permitir Letra Maisculas</input>
+                <input type="checkbox" name="" id="number">Permitir Numeros</input>
+            </div>
 
+            <!-- resultado -->
+            <div id="return">
+                <textarea name="senhas" id="password" placeholder="Senhas.."></textarea>
+                <button onclick="CopiarSenha()">Copiar Senhas</button> 
+            </div>
     </main>
     <footer>
         <p>&copy; 2024<a href="https://github.com/devdaniel28" target="_blank"> dvDaniel</a></p>   

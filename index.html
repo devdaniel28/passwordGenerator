@@ -12,22 +12,32 @@
 </head>
 <body>
     <header>
-        <h2>Gerador de Senhas</h2>
+        <h1>Gerador de Senhas</h1>
     </header>
-    <main>
+    <main id="all">
             <!-- config -->
             <div id="config"> 
                 <h3>Quantidade de Caracteres</h3>
                 <input type="number" value="10" min="5" max="25" id="caracteres">
                 
-                <input type="checkbox" name="" id="letras">Permitir Letra Maisculas</input>
-                <input type="checkbox" name="" id="number">Permitir Numeros</input>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="" class="ifelse">Permitir Letra Maisculas</input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="" class="ifelse">Permitir Numeros</input>
+                        </td>
+                    </tr>
+                </table>
             </div>
 
             <!-- resultado -->
             <div id="return">
                 <textarea name="senhas" id="password" placeholder="Senhas.."></textarea>
-                <button onclick="CopiarSenha()">Copiar Senhas</button> 
+                <button onclick="CopiarSenha()">Copiar Senha</button> 
             </div>
     </main>
     <footer>

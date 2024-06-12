@@ -64,6 +64,14 @@ header h1 {
     border-radius: 8px;
 
     margin: 8px 30px;
+
+    transition: background-color 0.5s ease-in-out;
+}
+
+#config button:hover {
+    background: #395253;
+    border: solid #395253 1px;
+    box-shadow: 0 1px 2px 0 #395253;
 }
 
 #return {
@@ -99,10 +107,19 @@ header h1 {
     
     border: #3C6E71 solid 1px;
     border-radius: 8px;
+
+    transition: background-color 0.5s ease-in-out;
+}
+
+#return button:hover {
+    background: #395253;
+    border: solid #395253 1px;
+    box-shadow: 0 2px 3px 0 #395253;
 }
 
 .ifelse {
     margin: 10px 5px 8px 30px;
+    
 }
 
 footer p {
@@ -151,4 +168,9 @@ footer p a {
         margin: 15px;
     
     }
+}
+
+::placeholder {
+    font-size: 20pt;
+    padding: 15px;
 }

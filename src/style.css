@@ -34,7 +34,7 @@ header h1 {
 
 }
 
-#caracteres {
+#charactervalue {
     display: block;
     width: 24rem;
     height: 4rem;
@@ -86,11 +86,12 @@ header h1 {
     border: #D9D9D9 solid 1px;
     border-radius: 15px;
 
-    padding: 10px;
+    padding: 15px;
 
-    margin: 15px;
+    font-size: 20pt;
 
 }
+
 
 #return button {
     display: block;
@@ -117,7 +118,7 @@ header h1 {
     box-shadow: 0 2px 3px 0 #395253;
 }
 
-.ifelse {
+#allownumbers, #allowlargeprint {
     margin: 10px 5px 8px 30px;
     
 }
@@ -139,7 +140,7 @@ footer p a {
         gap: 5px;
     }
 
-    #caracteres {
+    #charactervalue {
         display: block;
         width: 20rem;
         height: 4rem;
@@ -172,5 +173,4 @@ footer p a {
 
 ::placeholder {
     font-size: 20pt;
-    padding: 15px;
 }

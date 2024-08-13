@@ -9,26 +9,25 @@
     <title></title>
 
     <link rel="stylesheet" href="/src/style.css">
-    <script src="src/script.js"></script>
 </head>
 <body>
     <header>
         <h1>Gerador de Senhas</h1>
     </header>
     <main id="all">
-            <!-- config -->
-            <div id="config"> 
-                <h3>Quantidade de Caracteres</h3>
-                <input type="number" value="10" min="5" max="61" id="charactervalue">
-                
-                <table>
-                    <tr>
-                        <td>
-                            <input type="checkbox" name="allowlargeprint" id="allowlargeprint">Permitir Letra Maisculas</input>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
+        <!-- config -->
+        <div id="config"> 
+            <h3>Quantidade de Caracteres</h3>
+            <input type="number" value="62" min="5" max="62" id="charactervalue">
+            
+            <table>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="allowlargeprint" id="allowlargeprint">Permitir Letra Maisculas</input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                             <input type="checkbox" name="allownumbers" id="allownumbers">Permitir Numeros</input>
                         </td>
                     </tr>
@@ -41,9 +40,10 @@
                 <textarea name="senhas" placeholder="Senhas.."></textarea>
                 <button onclick="CopiarSenha()">Copiar Senha</button> 
             </div>
-    </main>
-    <footer>
-        <p>&copy; 2024<a href="https://github.com/devdaniel28" target="_blank"> dvDaniel</a></p>   
-    </footer>
-</body>
-</html>
+        </main>
+        <footer>
+            <p>&copy; 2024<a href="https://github.com/devdaniel28" target="_blank"> dvDaniel</a></p>   
+        </footer>
+    </body>
+    <script src="src/script.js"></script>
+    </html>

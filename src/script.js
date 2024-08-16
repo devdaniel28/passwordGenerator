@@ -17,12 +17,21 @@ console.log(randomNumber)
 const randomBigString = randomCaracteres("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 console.log(randomBigString)
 
-const randomPassword = randomCaracteres(randomNumber + randomBigString + randomString)
+const specialCharacters = randomCaracteres("!@#$%&*~?/")
+
+let randomPassword = randomCaracteres(randomNumber + randomBigString + randomString + specialCharacters)
 console.log(`A senha inteira e: ${randomPassword}`)
+randomPassword.split("")
 
-// condições das senhas 
-let characterValue = document.getElementById('charactervalue')
+function generatePassword() {
+  let characterValue = document.getElementById('charactervalue')
+  let allowLargePrint = document.getElementById('allowlargeprint')
+  let allowNumbers = document.getElementById("allownumbers")
+  let allowSpecialCharacters = document.getElementById("allowspecialsharacters")
+  
 
-let allowLargePrint = document.getElementById('allowlargeprint')
+  // Quantidade de caracteres
+  let desiredPassword = randomPassword.slice(0, characterValue.value)
+  console.log(`A senha desejada e: ${desiredPassword}`)
 
-let allowNumbers = document.getElementById("allownumbers")
+}

@@ -118,7 +118,7 @@ header h1 {
     box-shadow: 0 2px 3px 0 #395253;
 }
 
-#allownumbers, #allowlargeprint {
+#allownumbers, #allowlargeprint, #allowspecialsharacters {
     margin: 10px 5px 8px 30px;
     
 }

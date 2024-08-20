@@ -19,19 +19,24 @@ console.log(randomBigString)
 
 const specialCharacters = randomCaracteres("!@#$%&*~?/")
 
-let randomPassword = randomCaracteres(randomNumber + randomBigString + randomString + specialCharacters)
-console.log(`A senha inteira e: ${randomPassword}`)
-randomPassword.split("")
 
 function generatePassword() {
+  let randomPassword = randomCaracteres(randomNumber + randomBigString + randomString + specialCharacters)
+  console.log(`A senha inteira e: ${randomPassword}`)
+  randomPassword.split("")
+
   let characterValue = document.getElementById('charactervalue')
-  let allowLargePrint = document.getElementById('allowlargeprint')
-  let allowNumbers = document.getElementById("allownumbers")
-  let allowSpecialCharacters = document.getElementById("allowspecialsharacters")
+  let allowLargePrint = document.getElementById('allowlargeprint').checked
+  let allowNumbers = document.getElementById("allownumbers").checked
+  let allowSpecialCharacters = document.getElementById("allowspecialsharacters").checked
   
+// Permitir letras grandes
+if (allowLargePrint == true) {
+  randomPassword.replaceAll('1', '')
+}
+
 
   // Quantidade de caracteres
   let desiredPassword = randomPassword.slice(0, characterValue.value)
   console.log(`A senha desejada e: ${desiredPassword}`)
-
 }

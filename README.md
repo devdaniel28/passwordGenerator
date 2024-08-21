@@ -73,26 +73,6 @@ function generatePassword() {
   let passwordResult = document.getElementById("passwordresult");
   passwordResult.value = desiredPassword;
 }
-```## Contribuições
-
-Sinta-se à vontade para contribuir com melhorias ou novas funcionalidades.
-
-### Função `copyPassword`
-
-A função `copyPassword` copia a senha gerada para a área de transferência:
-
-```javascript
-async function copyPassword() {
-  let passwordToCopy = document.getElementById("passwordresult");
-  
-  try {
-    await navigator.clipboard.writeText(passwordToCopy.value);
-    passwordToCopy.value = "Senha copiada!";
-    console.log('Texto copiado para a área de transferência');
-  } catch (err) {
-    console.error(err);
-  }
-}
 ```
 
 ## Exemplo de Uso

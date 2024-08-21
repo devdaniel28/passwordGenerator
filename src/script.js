@@ -19,7 +19,7 @@ console.log(randomBigString)
 
 const specialCharacters = randomCaracteres("!@#$%&*~?/")
 
-
+// Função que gera a senha do jeito que o ususario deseja
 function generatePassword() {
   let randomPassword = randomCaracteres(randomNumber + randomBigString + randomString + specialCharacters)
   console.log(`A senha inteira e: ${randomPassword}`)
@@ -31,12 +31,44 @@ function generatePassword() {
   let allowSpecialCharacters = document.getElementById("allowspecialsharacters").checked
   
 // Permitir letras grandes
-if (allowLargePrint == true) {
-  randomPassword.replaceAll('1', '')
+if (allowLargePrint == false) {
+  const removeLargePrints =  ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+  removeLargePrints.forEach(char => {
+    randomPassword = randomPassword.split(char).join('');
+});
 }
 
+if (allowNumbers == false) {
+  const removeNumbers = ["1","2","3","4","5","6","7","8","9","0"]
+   removeNumbers.forEach(char => {
+    randomPassword = randomPassword.split(char).join('')
+   })
+}
+
+if (allowSpecialCharacters == false) {
+  const removeSpecialCharacters = ["!","@","#","$","%","&","*","~","?","/"]
+  removeSpecialCharacters.forEach(char => {
+    randomPassword = randomPassword.split(char).join('')
+   })
+}
 
   // Quantidade de caracteres
   let desiredPassword = randomPassword.slice(0, characterValue.value)
   console.log(`A senha desejada e: ${desiredPassword}`)
+
+ let passwordResult = document.getElementById("passwordresult")
+ 
+ passwordResult.value = desiredPassword
+}
+
+async function copyPassword() {
+  let passwordToCopy = document.getElementById("passwordresult")
+  
+  try {
+    await navigator.clipboard.writeText(passwordToCopy.value);
+    passwordToCopy.value = "Senha copiada!"
+    console.log('Texto copiado para a área de transferência')
+  } catch (err) {
+    console.error(err);
+  }
 }

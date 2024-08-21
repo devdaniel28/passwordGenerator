@@ -1,6 +1,6 @@
 # Gerador de Senhas Aleatórias
 
-**Link:** 
+**Link:** https://geradordesenhas001.netlify.app/
 
 Este projeto consiste em um gerador de senhas personalizáveis escrito em JavaScript. Ele permite criar senhas aleatórias compostas por letras maiúsculas, minúsculas, números e caracteres especiais, de acordo com as preferências do usuário.
 

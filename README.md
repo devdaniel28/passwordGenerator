@@ -103,5 +103,5 @@ A GNU General Public License é uma licença de software livre que garante aos u
 Para mais informações sobre a GNU GPL, consulte [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.html).
 
 
-**Autor:** ChatGPT
+**Autor:** dvcDaniel(eu) 
  

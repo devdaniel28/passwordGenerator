@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,8 +9,8 @@
     <title></title>
 
     <link rel="stylesheet" href="/src/style.css">
-</head>
-<body>
+ </head>
+ <body>
     <header>
         <h1>Gerador de Senhas</h1>
     </header>
@@ -35,7 +35,17 @@
                         <td>
                             <input type="checkbox" name="allowspecialsharacters" id="allowspecialsharacters">Permitir Caracteres Especiais</input>
                         </td>
-                    </tr>
+                    </tr> 
+                    <tr>
+                        <td>
+                            <input type="button" id="desiredtext" onclick="desiredText()" value="Adicionar palavra necessaria"> 
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td id="textthere">
+                            
+                        </td>
+                    </tr>      
                 </table>
                 <button onclick="generatePassword()">Gerar Senha</button>
             </div>
@@ -49,6 +59,6 @@
         <footer>
             <p>&copy; 2024<a href="https://github.com/devdaniel28" target="_blank"> dvcDaniel</a></p>   
         </footer>
-    </body>
+ </body>
     <script src="src/script.js"></script>
-    </html>
+</html>

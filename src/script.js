@@ -8,6 +8,20 @@ function randomCaracteres(str) {
   return arr.join("")
 }
 
+function desiredText() {
+    const textHere = document.createElement("input")
+    const textThere = document.getElementById('textthere')
+    const desiredText = document.getElementById('desiredtext')
+
+    textHere.type = "text"
+    textHere.placeholder = "Digite o texto que deseja.."
+    textHere.id = "texthere"
+
+    textThere.appendChild(textHere)
+
+    return desiredText.style.display = 'none'
+}
+
 const randomString = randomCaracteres("abcdefghijklmnopqrstuvwxyz")
 console.log(randomString)
 
@@ -18,6 +32,7 @@ const randomBigString = randomCaracteres("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 console.log(randomBigString)
 
 const specialCharacters = randomCaracteres("!@#$%&*~?/")
+
 
 // Função que gera a senha do jeito que o ususario deseja
 function generatePassword() {
@@ -50,7 +65,6 @@ if (allowSpecialCharacters == false) {
     randomPassword = randomPassword.split(char).join('')
    })
 }
-
 
 // Quantidade de caracteres
 let desiredPassword = randomPassword.slice(0, characterValue.value)

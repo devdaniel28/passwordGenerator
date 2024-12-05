@@ -8,19 +8,7 @@ function randomCaracteres(str) {
   return arr.join("")
 }
 
-function desiredText() {
-    const textHere = document.createElement("input")
-    const textThere = document.getElementById('textthere')
-    const desiredText = document.getElementById('desiredtext')
 
-    textHere.type = "text"
-    textHere.placeholder = "Digite o texto que deseja.."
-    textHere.id = "texthere"
-
-    textThere.appendChild(textHere)
-
-    return desiredText.style.display = 'none'
-}
 
 const randomString = randomCaracteres("abcdefghijklmnopqrstuvwxyz")
 console.log(randomString)
@@ -38,13 +26,14 @@ const specialCharacters = randomCaracteres("!@#$%&*~?/")
 function generatePassword() {
   let randomPassword = randomCaracteres(randomNumber + randomBigString + randomString + specialCharacters)
   console.log(`A senha inteira e: ${randomPassword}`)
-  randomPassword.split("")
+  randomPassword.split("") 
 
   let characterValue = document.getElementById('charactervalue')
   let allowLargePrint = document.getElementById('allowlargeprint').checked
   let allowNumbers = document.getElementById("allownumbers").checked
   let allowSpecialCharacters = document.getElementById("allowspecialsharacters").checked
-  
+
+
 if (allowLargePrint == false) {
   const removeLargePrints =  ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
   removeLargePrints.forEach(char => {
@@ -52,6 +41,7 @@ if (allowLargePrint == false) {
 });
 }
 
+// Condição da config
 if (allowNumbers == false) {
   const removeNumbers = ["1","2","3","4","5","6","7","8","9","0"]
    removeNumbers.forEach(char => {
@@ -66,12 +56,12 @@ if (allowSpecialCharacters == false) {
    })
 }
 
+
 // Quantidade de caracteres
 let desiredPassword = randomPassword.slice(0, characterValue.value)
 console.log(`A senha desejada e: ${desiredPassword}`)
 
 let passwordResult = document.getElementById("passwordresult")
-
 passwordResult.value = desiredPassword
 
 if (characterValue.value < 5 || characterValue.value > 62) {
